@@ -1,0 +1,38 @@
+[versions]
+agp = "8.5.0"
+compose-plugin = "1.6.11"
+kotlin = "2.0.0"
+jvmTarget="17"
+jetpack-compose-bom = "2024.06.00"
+coroutines-bom = "1.8.1"
+android-compileSdk = "34"
+android-minSdk = "28"
+android-targetSdk = "34"
+dokka = "1.9.20"
+kotlinxDatetime = "0.6.0"
+
+
+[libraries]
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "jetpack-compose-bom" }
+coroutines-bom = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-bom", version.ref = "coroutines-bom" }
+kotlin-bom = { group = "org.jetbrains.kotlin", name = "kotlin-bom", version.ref = "kotlin" }
+kotlin-plugins-bom = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugins-bom", version.ref = "kotlin" }
+
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core" }
+coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+
+[plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-plugin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+kotlin-cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+# 下面这个是假的，只是为了占位
+jvmTargetPlaceHolder = { id = "org.jdk.kotlin.holder", version.ref = "jvmTarget" }
