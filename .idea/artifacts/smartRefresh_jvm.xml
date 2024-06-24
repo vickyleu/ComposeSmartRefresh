@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="smartRefresh-jvm">
-    <output-path>$PROJECT_DIR$/smartRefresh/build/libs</output-path>
-    <root id="archive" name="smartRefresh-jvm.jar">
-      <element id="module-output" name="ComposeSmartRefresh.smartRefresh.jvmMain" />
-    </root>
-  </artifact>
-</component>
