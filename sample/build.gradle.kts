@@ -14,6 +14,24 @@ kotlin {
     jvm("desktop")
 
     sourceSets {
+        commonMain.get().dependencies {
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.animation)
+            implementation(compose.material3)
+            implementation(compose.ui)
+            implementation(compose.components.uiToolingPreview)
+            implementation(compose.components.resources)
+            implementation(projects.smartRefresh)
+            implementation(project.dependencies.platform(libs.compose.bom))
+            implementation(libs.kotlinx.datetime)
+        }
+
+        val desktopMain by getting{
+            dependencies{
+                implementation(compose.desktop.currentOs)
+            }
+        }
 
     }
 }
@@ -78,7 +96,7 @@ android {
         implementation("androidx.activity:activity-compose:1.8.0")
         implementation("androidx.compose.runtime:runtime-livedata:1.1.1")
 
-        implementation(projects.smartRefresh)
+
 
     }
 }
