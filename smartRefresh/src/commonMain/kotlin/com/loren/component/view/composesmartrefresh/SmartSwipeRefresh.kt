@@ -71,10 +71,6 @@ import kotlin.math.absoluteValue
  * [content] 内容布局
  */
 
-expect class SimpleDateFormatImpl(format: String, locale: Locale) {
-    fun format(timeMs:Long):String
-}
-
 @Suppress("unused")
 @Composable
 fun SmartSwipeRefresh(
